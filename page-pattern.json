@@ -1,0 +1,289 @@
+{
+  "pattern_id": "pdp_page",
+  "intent": "Display product details with media gallery, pricing, and purchase options",
+  "layout": "two_column_with_header",
+  "regions": {
+    "header": [
+      {
+        "component": "Headerbase",
+        "priority": "high",
+        "children": [
+          {
+            "component": "Frame",
+            "slot": "navigation",
+            "children": [
+              {
+                "component": "Menu",
+                "content": "Home"
+              },
+              {
+                "component": "Menu1",
+                "content": "About us"
+              },
+              {
+                "component": "Menu2",
+                "content": "Products"
+              }
+            ]
+          },
+          {
+            "component": "Frame2",
+            "slot": "actions",
+            "children": [
+              {
+                "component": "Frame1",
+                "repeat": 3,
+                "children": [
+                  {
+                    "component": "Container",
+                    "children": [
+                      {
+                        "component": "Icon",
+                        "type": "search"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "breadcrumb": [
+      {
+        "component": "Frame13",
+        "priority": "medium",
+        "children": [
+          {
+            "component": "Breadcrumbs",
+            "levels": 4
+          }
+        ]
+      }
+    ],
+    "primary": [
+      {
+        "component": "ProductMediaSection",
+        "priority": "high",
+        "children": [
+          {
+            "component": "MainImage",
+            "type": "Rectangle1",
+            "aspect_ratio": "552:552"
+          },
+          {
+            "component": "Frame4",
+            "slot": "thumbnails",
+            "children": [
+              {
+                "component": "Rectangle",
+                "type": "thumbnail"
+              },
+              {
+                "component": "Rectangle1",
+                "type": "thumbnail",
+                "repeat": 2
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "secondary": [
+      {
+        "component": "Frame6",
+        "priority": "high",
+        "children": [
+          {
+            "component": "Productbrandrating",
+            "priority": "high",
+            "children": [
+              {
+                "component": "Frame5",
+                "children": [
+                  {
+                    "component": "BrandName",
+                    "type": "text"
+                  },
+                  {
+                    "component": "Heart",
+                    "type": "icon"
+                  }
+                ]
+              },
+              {
+                "component": "StarRating",
+                "children": [
+                  {
+                    "component": "Vector",
+                    "type": "star_icon",
+                    "repeat": 5
+                  },
+                  {
+                    "component": "RatingCount",
+                    "type": "text",
+                    "content": "786"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "ProductName",
+            "type": "text",
+            "priority": "high"
+          },
+          {
+            "component": "ProductPrice",
+            "priority": "high",
+            "children": [
+              {
+                "component": "Frame7",
+                "children": [
+                  {
+                    "component": "CurrentPrice",
+                    "type": "text"
+                  },
+                  {
+                    "component": "OriginalPrice",
+                    "type": "text",
+                    "style": "strikethrough"
+                  },
+                  {
+                    "component": "DiscountPercent",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "SizeColorSelector",
+            "priority": "high",
+            "children": [
+              {
+                "component": "SizeChartLink",
+                "type": "text"
+              },
+              {
+                "component": "Frame8",
+                "children": [
+                  {
+                    "component": "Dropdown",
+                    "type": "size_selector",
+                    "children": [
+                      {
+                        "component": "ChevronDown",
+                        "type": "icon"
+                      }
+                    ]
+                  },
+                  {
+                    "component": "Dropdown1",
+                    "type": "color_selector",
+                    "children": [
+                      {
+                        "component": "ChevronDown1",
+                        "type": "icon"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "AvailableOptionsLabel",
+            "type": "text",
+            "priority": "medium"
+          },
+          {
+            "component": "Frame11",
+            "slot": "purchase_options",
+            "priority": "high",
+            "children": [
+              {
+                "component": "CardSelector",
+                "children": [
+                  {
+                    "component": "Frame9",
+                    "children": [
+                      {
+                        "component": "Dollar",
+                        "type": "icon"
+                      }
+                    ]
+                  },
+                  {
+                    "component": "OptionLabel",
+                    "type": "text"
+                  },
+                  {
+                    "component": "OptionPrice",
+                    "type": "text"
+                  }
+                ]
+              },
+              {
+                "component": "CardSelector1",
+                "children": [
+                  {
+                    "component": "Frame10",
+                    "children": [
+                      {
+                        "component": "Dollar1",
+                        "type": "icon"
+                      }
+                    ]
+                  },
+                  {
+                    "component": "OptionLabel",
+                    "type": "text"
+                  },
+                  {
+                    "component": "OptionPrice",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "Frame12",
+            "slot": "delivery_info",
+            "priority": "medium",
+            "children": [
+              {
+                "component": "Iconwithtext",
+                "repeat": 2,
+                "children": [
+                  {
+                    "component": "Truck",
+                    "type": "icon"
+                  },
+                  {
+                    "component": "DeliveryText",
+                    "type": "text"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "Button",
+            "type": "cta",
+            "priority": "high"
+          }
+        ]
+      }
+    ]
+  },
+  "constraints": {
+    "must_have_cta": true,
+    "must_have_pricing": true,
+    "must_have_product_images": true,
+    "image_ratio": "1:1",
+    "responsive_breakpoint": "desktop_first"
+  }
+}
